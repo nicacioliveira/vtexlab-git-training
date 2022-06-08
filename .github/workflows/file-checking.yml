@@ -5,6 +5,7 @@ on: [push, pull_request]
 jobs:
   file_existence:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
@@ -18,7 +19,7 @@ jobs:
       - name: Using my github environment secret
         env:
           VARIAVEL_SUPER_SECRETA: ${{ secrets.VARIAVEL_SUPER_SECRETA }}
-        run: echo "$VARIAVEL_SUPER_SECRETA"
+        run: echo $VARIAVEL_SUPER_SECRETA
 
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
