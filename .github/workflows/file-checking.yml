@@ -15,6 +15,9 @@ jobs:
         with:
           files: "vtexlab.txt"
 
+      - name: Using my github environment secret
+        run: echo $VARIAVEL_SUPER_SECRETA
+
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
         # Only runs if all of the files exists
