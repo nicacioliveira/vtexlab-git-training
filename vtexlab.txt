@@ -1,1 +1,1 @@
-VTEX Lab - git training. jun/2022
+modifyed for tests
