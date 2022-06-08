@@ -16,7 +16,7 @@ jobs:
           files: "vtexlab.txt"
 
       - name: Using my github environment secret
-        run: echo $VARIAVEL_SUPER_SECRETA
+        run: echo "$VARIAVEL_SUPER_SECRETA"
 
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
