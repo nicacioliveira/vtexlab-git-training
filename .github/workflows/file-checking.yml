@@ -17,7 +17,7 @@ jobs:
 
       - name: Using my github environment secret
         env:
-          SECRET_VALUE: ${{ secrets.VARIAVEL_SUPER_SECRETA }}
+          VARIAVEL_SUPER_SECRETA: ${{ secrets.VARIAVEL_SUPER_SECRETA }}
         run: echo "$VARIAVEL_SUPER_SECRETA"
 
       - name: File exists
